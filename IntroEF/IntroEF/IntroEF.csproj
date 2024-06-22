@@ -132,6 +132,10 @@
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="DTOs\StudentDTO.cs" />
+    <Compile Include="EF\Cours.cs">
+      <DependentUpon>UMSModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\Employee.cs">
       <DependentUpon>UMSModel.tt</DependentUpon>
     </Compile>
@@ -219,6 +223,7 @@
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Student\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

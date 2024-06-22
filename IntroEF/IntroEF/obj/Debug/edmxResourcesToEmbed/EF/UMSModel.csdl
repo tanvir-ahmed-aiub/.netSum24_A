@@ -23,5 +23,14 @@
   <EntityContainer Name="DemoDB_A_Sum24Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Employees" EntityType="Self.Employee" />
     <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="Courses" EntityType="DemoDB_A_Sum24Model.Cours" />
   </EntityContainer>
+  <EntityType Name="Cours">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreditHr" Type="Int32" Nullable="false" />
+  </EntityType>
 </Schema>

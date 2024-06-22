@@ -7,6 +7,7 @@
       <Diagram DiagramId="a6ef7266d29449779ed30705e9fcf480" Name="Diagram1">
         <EntityTypeShape EntityType="DemoDB_A_Sum24Model.Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DemoDB_A_Sum24Model.Student" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoDB_A_Sum24Model.Cours" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
