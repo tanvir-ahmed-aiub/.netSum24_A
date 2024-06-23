@@ -15,7 +15,8 @@ namespace IntroEF.Controllers
         {
             DemoDB_A_Sum24Entities db = new DemoDB_A_Sum24Entities();
             var data = db.Students.ToList();
-            return View(data);
+            var converted = Convert(data);
+            return View(converted);
         }
         [HttpGet]
         public ActionResult Create() { 
@@ -26,13 +27,7 @@ namespace IntroEF.Controllers
 
             DemoDB_A_Sum24Entities db = new DemoDB_A_Sum24Entities();
             if (ModelState.IsValid) {
-                var st = new Student() {
-                    Name = s.FName.Trim()+" "+s.LName.Trim(),
-                    Address = s.Address,
-                    Email= s.Email,
-                    Phone = s.Phone,
-
-                };
+                var st = Convert(s);
                 db.Students.Add(st);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -77,10 +72,35 @@ namespace IntroEF.Controllers
 
             //using same view for multiple puposes
 
-            return View("Index",data);
-
-
-
+            return View("Index",Convert(data));
+        }
+        public static StudentDTO Convert(Student s) {
+            var name = s.Name.Split(' ');
+            return new StudentDTO() { 
+                FName = name[0],
+                LName = name[1],
+                Address = s.Address,
+                Email = s.Email,
+                Id = s.Id
+            };
+        }
+        public static Student Convert(StudentDTO s)
+        {
+            return new Student()
+            {
+                Name = s.FName.Trim() + " "+s.LName.Trim(),
+                Address = s.Address,
+                Email = s.Email,
+                Id = s.Id
+            };
+        }
+        public static List<StudentDTO> Convert(List<Student> students) { 
+            var list = new List<StudentDTO>();
+            foreach (var s in students) {
+                var st = Convert(s);
+                list.Add(st);
+            }
+            return list;
         }
     }
 }
