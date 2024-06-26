@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -128,11 +131,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Auth\AdminAccess.cs" />
+    <Compile Include="Auth\Customer.cs" />
+    <Compile Include="Auth\Logged.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="DTOs\CategoryDTO.cs" />
+    <Compile Include="DTOs\LoginDTO.cs" />
+    <Compile Include="DTOs\OrderDTO.cs" />
+    <Compile Include="DTOs\OrderProductDTO.cs" />
     <Compile Include="DTOs\ProductDTO.cs" />
     <Compile Include="EF\Category.cs">
       <DependentUpon>PMSModel.tt</DependentUpon>
@@ -159,6 +170,9 @@
       <DependentUpon>PMSModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="EF\Product.cs">
+      <DependentUpon>PMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\User.cs">
       <DependentUpon>PMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -223,6 +237,10 @@
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Order\Cart.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Orders.cshtml" />
+    <Content Include="Views\Admin\Od.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

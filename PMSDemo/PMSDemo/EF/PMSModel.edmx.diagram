@@ -12,6 +12,8 @@
         <AssociationConnector Association="PMS_Sm24_AModel.FK_Products_Categories" ManuallyRouted="false" />
         <AssociationConnector Association="PMS_Sm24_AModel.FK_OrderProducts_Orders" ManuallyRouted="false" />
         <AssociationConnector Association="PMS_Sm24_AModel.FK_OrderProducts_Products" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PMS_Sm24_AModel.User" Width="1.5" PointX="6" PointY="6" />
+        <AssociationConnector Association="PMS_Sm24_AModel.FK_Orders_Users" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

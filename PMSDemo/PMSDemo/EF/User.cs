@@ -12,22 +12,20 @@ namespace PMSDemo.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Order()
+        public User()
         {
-            this.OrderProducts = new HashSet<OrderProduct>();
+            this.Orders = new HashSet<Order>();
         }
     
         public int Id { get; set; }
-        public string Status { get; set; }
-        public decimal TotalAmount { get; set; }
-        public System.DateTime OrderDate { get; set; }
-        public Nullable<int> UserId { get; set; }
+        public string Uname { get; set; }
+        public string Pass { get; set; }
+        public string Type { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderProduct> OrderProducts { get; set; }
-        public virtual User User { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

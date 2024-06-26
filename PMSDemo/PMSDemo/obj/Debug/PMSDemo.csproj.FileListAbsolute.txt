@@ -81,3 +81,5 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSDemo\PMSDemo\obj\Debug\PMSDemo.csproj.Co
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSDemo\PMSDemo\obj\Debug\PMSDemo.csproj.CopyComplete
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSDemo\PMSDemo\obj\Debug\PMSDemo.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSDemo\PMSDemo\obj\Debug\PMSDemo.pdb
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSDemo\PMSDemo\bin\AutoMapper.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSDemo\PMSDemo\bin\AutoMapper.xml

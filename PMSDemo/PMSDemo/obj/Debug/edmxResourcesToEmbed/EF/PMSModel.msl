@@ -23,6 +23,7 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="PMS_Sm24_AModel.Order">
         <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
@@ -38,6 +39,16 @@
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Qty" ColumnName="Qty" />
           <ScalarProperty Name="CId" ColumnName="CId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PMS_Sm24_AModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -23,7 +23,16 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li><a href="/Order/Cart">Cart</a></li>
+                    <li><a href="/Login/Index">Login</a></li>
+                    @if (Session["user"] != null &&
+                        ((PMSDemo.EF.User)Session["user"]).Type.Equals("Customer")
+                        )
+                    {
+                        <li><a href="/Order/Index">Order Products</a></li>
+                        <li><a href="/Order/Cart">Cart</a></li>
+                    }
+
+
                 </ul>
             </div>
         </div>

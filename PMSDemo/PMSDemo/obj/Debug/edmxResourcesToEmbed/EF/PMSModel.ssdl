@@ -25,6 +25,7 @@
     <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="OrderDate" Type="date" Nullable="false" />
+    <Property Name="UserId" Type="int" />
   </EntityType>
   <EntityType Name="Products">
     <Key>
@@ -35,6 +36,15 @@
     <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="Qty" Type="int" Nullable="false" />
     <Property Name="CId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pass" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK_OrderProducts_Orders">
     <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
@@ -60,6 +70,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Orders_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Products_Categories">
     <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
     <End Role="Products" Type="Self.Products" Multiplicity="*" />
@@ -77,6 +99,7 @@
     <EntitySet Name="OrderProducts" EntityType="Self.OrderProducts" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_OrderProducts_Orders" Association="Self.FK_OrderProducts_Orders">
       <End Role="Orders" EntitySet="Orders" />
       <End Role="OrderProducts" EntitySet="OrderProducts" />
@@ -84,6 +107,10 @@
     <AssociationSet Name="FK_OrderProducts_Products" Association="Self.FK_OrderProducts_Products">
       <End Role="Products" EntitySet="Products" />
       <End Role="OrderProducts" EntitySet="OrderProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Users" Association="Self.FK_Orders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
     <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
       <End Role="Categories" EntitySet="Categories" />

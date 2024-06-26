@@ -20,11 +20,17 @@
         <th>
             @Html.DisplayNameFor(model => model.Qty)
         </th>
+        <th>
+            Unit Total
+        </th>
         
        
     </tr>
-
-@foreach (var item in Model) {
+    @{ 
+        decimal total = 0;
+    }
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
@@ -35,8 +41,26 @@
         <td>
             @Html.DisplayFor(modelItem => item.Qty)
         </td>
+        <td>
+            @{ 
+                
+                total += item.Price * item.Qty;
+
+            }
+            @item.Qty x @item.Price = @(item.Price * item.Qty)
+        </td>
        
     </tr>
 }
 
+<tr>
+    <td></td>
+    <td></td>
+    <th>Grand Total</th>
+    <td>@total</td>
+</tr>
 </table>
+<form action="/Order/PlaceOrder" method="post">
+    <input type="hidden" name="Total" value="@total" />
+    <input type="submit" value="Place Order" class="btn btn-success" />
+</form>
