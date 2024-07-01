@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Comments";
+}
+
+<h1>@Model.Title</h1>
+<h2>Posted On: @Model.PostTime</h2>
+
+@if (Model.Comments.Count > 0) {
+    <h5>Comments</h5>
+    <ul>
+        @foreach (var item in Model.Comments)
+        {
+            <li>@item.Comments</li>
+        }
+    </ul>
+
+}
+else { 
+    <h5>No Comments</h5>
+}
