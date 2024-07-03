@@ -12,24 +12,17 @@ namespace PostCommentDemo.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class Post
+    public partial class Tag
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Post()
+        public Tag()
         {
-            this.Comments = new HashSet<Comment>();
-            this.Likes = new HashSet<Like>();
             this.PostTags = new HashSet<PostTag>();
         }
     
         public int Id { get; set; }
-        public string Title { get; set; }
-        public System.DateTime PostTime { get; set; }
+        public string Name { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Like> Likes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PostTag> PostTags { get; set; }
     }

@@ -139,7 +139,11 @@
     <Compile Include="DTOs\CommentDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
     <Compile Include="DTOs\PostDTO.cs" />
+    <Compile Include="DTOs\TagDTO.cs" />
     <Compile Include="EF\Comment.cs">
+      <DependentUpon>PostComment.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Like.cs">
       <DependentUpon>PostComment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Post.cs">
@@ -159,6 +163,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PostComment.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PostTag.cs">
+      <DependentUpon>PostComment.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Tag.cs">
+      <DependentUpon>PostComment.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -221,11 +231,12 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Dashboard\Comments.cshtml" />
+    <Content Include="Views\Shared\_MyLayout.cshtml" />
+    <Content Include="Views\Post\TestView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Post\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
