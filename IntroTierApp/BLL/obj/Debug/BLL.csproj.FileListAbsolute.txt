@@ -9,3 +9,6 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\BLL\obj\Debug\BLL.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\BLL\obj\Debug\BLL.pdb
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\BLL\bin\Debug\AutoMapper.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\BLL\bin\Debug\AutoMapper.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\BLL\bin\Debug\DAL.dll.config
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\BLL\bin\Debug\EntityFramework.xml

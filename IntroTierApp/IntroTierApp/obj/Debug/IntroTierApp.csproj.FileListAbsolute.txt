@@ -71,3 +71,8 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\IntroTierApp\bin\DAL.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\IntroTierApp\bin\AutoMapper.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\IntroTierApp\bin\DAL.pdb
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\IntroTierApp\bin\AutoMapper.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\IntroTierApp\bin\EntityFramework.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\IntroTierApp\bin\EntityFramework.SqlServer.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\IntroTierApp\bin\EntityFramework.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\IntroTierApp\bin\EntityFramework.SqlServer.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\IntroTierApp\IntroTierApp\bin\DAL.dll.config
