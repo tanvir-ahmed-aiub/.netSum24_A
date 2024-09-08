@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace BLL.DTOs
 {
-    public class Class1
+    public class DepartmentDTO
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

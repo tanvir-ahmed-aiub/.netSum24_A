@@ -1,5 +1,6 @@
 ﻿using DAL.EF;
 using DAL.EF.TableModels;
+using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,31 +9,36 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class PersonRepo
+    internal class PersonRepo : Repo, IRepo<Person, int, bool>
     {
-        static Context db = new Context();
-        public static List<Person> Get() {
-            return db.Persons.ToList();
-        }
-        public static Person Get(int id) {
-            //var person = db.Persons.SingleOrDefault(x=> x.Id == id);
-            return db.Persons.Find(id);
-        }
-        public static bool Create(Person p) {
-            db.Persons.Add(p);
+        public bool Add(Person obj)
+        {
+            db.Persons.Add(obj);
             return db.SaveChanges() > 0;
         }
-        public static bool Update(Person p) {
-            var exobj = Get(p.Id);
-            db.Entry(exobj).CurrentValues.SetValues(p);
-            return db.SaveChanges() > 0;
-        }
-        public static bool Delete(int id) {
+
+        public bool Delete(int id)
+        {
             var exobj = Get(id);
             db.Persons.Remove(exobj);
             return db.SaveChanges() > 0;
         }
-        
 
+        public List<Person> Get()
+        {
+            return db.Persons.ToList();
+        }
+
+        public Person Get(int id)
+        {
+            return db.Persons.Find(id);
+        }
+
+        public bool Update(Person obj)
+        {
+            var exobj = Get(obj.Id);
+            db.Entry(exobj).CurrentValues.SetValues(obj);
+            return db.SaveChanges() > 0;
+        }
     }
 }

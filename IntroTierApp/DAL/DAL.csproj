@@ -51,17 +51,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EF\Context.cs" />
     <Compile Include="EF\TableModels\Department.cs" />
     <Compile Include="EF\TableModels\Person.cs" />
+    <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202409040815377_InitDB.cs" />
     <Compile Include="Migrations\202409040815377_InitDB.designer.cs">
       <DependentUpon>202409040815377_InitDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\DepartmentRepo.cs" />
     <Compile Include="Repos\PersonRepo.cs" />
+    <Compile Include="Repos\PersonRepoV2.cs" />
+    <Compile Include="Repos\Repo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
