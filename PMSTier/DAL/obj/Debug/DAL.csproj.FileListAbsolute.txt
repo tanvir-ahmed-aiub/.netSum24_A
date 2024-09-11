@@ -12,3 +12,4 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\bin\Debug\EntityFramework.SqlSe
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\obj\Debug\DAL.Migrations.InitDB.resources
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\obj\Debug\DAL.Migrations.UserTableAdded.resources

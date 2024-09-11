@@ -18,5 +18,11 @@ namespace DAL
         {
             return new CategoryRepo();
         }
+        public static IRepo<User, string, User> UserData() {
+            return new UserRepo();
+        }
+        public static IAuth AuthData() {
+            return new UserRepo();
+        }
     }
 }

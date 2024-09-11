@@ -14,6 +14,16 @@
 
         protected override void Seed(DAL.EF.PContext context)
         {
+            /*Random rand  = new Random();
+            for (int i = 1; i <= 1000; i++) {
+                context.Products.Add(
+                    new EF.TableModels.Product() { 
+                        Name = Guid.NewGuid().ToString(),
+                        PId = rand.Next(1,6), //categoryID
+                    }
+                );
+            }*/
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method

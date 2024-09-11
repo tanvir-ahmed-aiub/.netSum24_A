@@ -55,10 +55,15 @@
     <Compile Include="EF\PContext.cs" />
     <Compile Include="EF\TableModels\Category.cs" />
     <Compile Include="EF\TableModels\Product.cs" />
+    <Compile Include="EF\TableModels\User.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202409090834198_InitDB.cs" />
     <Compile Include="Migrations\202409090834198_InitDB.designer.cs">
       <DependentUpon>202409090834198_InitDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409110855135_UserTableAdded.cs" />
+    <Compile Include="Migrations\202409110855135_UserTableAdded.designer.cs">
+      <DependentUpon>202409110855135_UserTableAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202409090834198_InitDB.resx">
       <DependentUpon>202409090834198_InitDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409110855135_UserTableAdded.resx">
+      <DependentUpon>202409110855135_UserTableAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
