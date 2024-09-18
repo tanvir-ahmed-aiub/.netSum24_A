@@ -13,3 +13,4 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\obj\Debug\DAL.csproj.CopyComple
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\obj\Debug\DAL.Migrations.InitDB.resources
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\obj\Debug\DAL.Migrations.UserTableAdded.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\PMSTier\DAL\obj\Debug\DAL.Migrations.TokenTBL.resources
