@@ -52,5 +52,13 @@ namespace BLL.Services
             if (token != null && token.ExpiredAt == null) return true;
             return false;
         }
+        public static bool IsTokenValidAdmin(string key) {
+            var token = DataAccess.TokenData().Get(key);
+            if (token != null && token.ExpiredAt == null &&
+                token.User.Role.Equals("Admin")) return true;
+            return false;
+
+        }
+
     }
 }

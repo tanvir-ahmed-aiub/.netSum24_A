@@ -11,7 +11,7 @@ using System.Web.Http.Cors;
 
 namespace PMSTier.Controllers
 {
-    //[Logged]
+    [AdminAccess]
     [RoutePrefix("api/category")]
     [EnableCors("*", "*", "*")]
     public class CategoryController : ApiController

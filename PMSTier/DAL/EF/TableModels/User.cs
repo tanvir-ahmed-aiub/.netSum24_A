@@ -20,5 +20,6 @@ namespace DAL.EF.TableModels
         [StringLength(10)]
         public string Password { get; set; }
         public string Email { get; set; }
+        public string Role { get; set; }
     }
 }
